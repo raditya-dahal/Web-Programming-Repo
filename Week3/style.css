@@ -1,0 +1,38 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(71, 54, 54);
+    color: white;
+}
+
+h1 {
+    color: rgb(215, 0, 0);
+}
+
+.div {
+    margin: 10px;
+    padding: 10px;
+}
+
+#img {
+    width: 400px;
+    align-items: center;
+}
+
+#table{
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+}
+h3{
+    color: rgb(255, 150, 150);
+}
+#link{
+    text-decoration: none;
+    color: yellow;
+}
