@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -22,17 +23,27 @@ h1 {
 #img {
     width: 400px;
     align-items: center;
+    border-radius: 25px;
+    background-color: #def5bd;
+    padding: 20px;
 }
 
-#table{
+#table {
     justify-content: center;
     text-align: left;
     width: 50%;
 }
-h3{
+
+h3 {
     color: rgb(255, 150, 150);
 }
-#link{
+
+#link {
     text-decoration: none;
     color: yellow;
+}
+
+a:hover {
+
+    font-size: 105%;
 }
