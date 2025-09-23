@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - BrightNest Kids</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Bright<span>Nest</span> Kids</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="elearning.html">e-Learning</a></li>
+                    <li><a href="activities.html" class="active">Activities</a></li>
+                    <li><a href="caretaker.html">Care Taker</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1 class="page-title">Activities & Games</h1>
+            <p class="page-subtitle">Discover engaging physical activities, mental exercises, and games to support your child's development.</p>
+            
+            <!-- Activity Filters -->
+            <div class="activity-filters">
+                <button class="activity-type active">All Activities</button>
+                <button class="activity-type">Physical Activities</button>
+                <button class="activity-type">Mental Activities</button>
+                <button class="activity-type">Games</button>
+                <button class="activity-type">Indoor</button>
+                <button class="activity-type">Outdoor</button>
+            </div>
+            
+            <!-- Activities Grid -->
+            <div class="activities-grid">
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x400/?children,playing" alt="Obstacle Course" class="card-image">
+                    <h3 class="card-title">Indoor Obstacle Course</h3>
+                    <p>Create a fun obstacle course using household items to develop motor skills and coordination.</p>
+                    <span class="age-badge">Ages 3-6</span>
+                </div>
+                
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x400/?puzzle" alt="Puzzle Game" class="card-image">
+                    <h3 class="card-title">Memory Matching Game</h3>
+                    <p>Improve concentration and memory with this classic card matching game.</p>
+                    <span class="age-badge">Ages 4-8</span>
+                </div>
+                
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x400/?children,art" alt="Art Activity" class="card-image">
+                    <h3 class="card-title">Creative Storytelling</h3>
+                    <p>Encourage imagination and language skills through collaborative storytelling.</p>
+                    <span class="age-badge">Ages 5-10</span>
+                </div>
+                
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x400/?children,sports" alt="Sports Activity" class="card-image">
+                    <h3 class="card-title">Balloon Volleyball</h3>
+                    <p>Safe indoor volleyball using balloons to develop hand-eye coordination.</p>
+                    <span class="age-badge">Ages 3-7</span>
+                </div>
+                
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x400/?science,experiment" alt="Science Experiment" class="card-image">
+                    <h3 class="card-title">Simple Science Experiments</h3>
+                    <p>Fun and educational experiments to spark curiosity about the world.</p>
+                    <span class="age-badge">Ages 6-12</span>
+                </div>
+                
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x400/?music,children" alt="Music Activity" class="card-image">
+                    <h3 class="card-title">DIY Musical Instruments</h3>
+                    <p>Create simple instruments from household items and explore rhythm and sound.</p>
+                    <span class="age-badge">Ages 4-9</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BrightNest Kids</h3>
+                    <p>Dedicated to supporting children's development through resources, activities, and guidance for caregivers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="elearning.html">e-Learning</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="caretaker.html">Care Taker</a></li>
+                        <li><a href="information.html">Information</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: info@brightnestkids.com</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Address: 123 Learning St, Education City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BrightNest Kids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Activity filter functionality
+        const activityTypes = document.querySelectorAll('.activity-type');
+        
+        activityTypes.forEach(type => {
+            type.addEventListener('click', () => {
+                activityTypes.forEach(t => t.classList.remove('active'));
+                type.classList.add('active');
+                // In a real application, you would filter activities here
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Adjust navigation for mobile on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+            } else {
+                nav.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

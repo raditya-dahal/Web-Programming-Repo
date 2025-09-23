@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Learning - BrightNest Kids</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Bright<span>Nest</span> Kids</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="elearning.html" class="active">e-Learning</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="caretaker.html">Care Taker</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1 class="page-title">e-Learning Resources</h1>
+            <p class="page-subtitle">Access articles, books, research studies, and facts related to child psychology, development, activities, and theories.</p>
+            
+            <!-- Category Filters -->
+            <div class="categories">
+                <button class="category-btn active">All Resources</button>
+                <button class="category-btn">Child Psychology</button>
+                <button class="category-btn">Development</button>
+                <button class="category-btn">Activities</button>
+                <button class="category-btn">Health & Diseases</button>
+                <button class="category-btn">Theories</button>
+            </div>
+            
+            <!-- Resources Grid -->
+            <div class="resources">
+                <div class="card">
+                    <div class="resource-icon">📚</div>
+                    <h3 class="card-title">Child Development Basics</h3>
+                    <p>Comprehensive guide covering all stages of child development from birth to adolescence.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <div class="resource-icon">🧠</div>
+                    <h3 class="card-title">Understanding Child Psychology</h3>
+                    <p>Learn about cognitive, emotional, and social development in children.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <div class="resource-icon">📖</div>
+                    <h3 class="card-title">Effective Learning Strategies</h3>
+                    <p>Research-based approaches to enhance learning and retention in children.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <div class="resource-icon">🏥</div>
+                    <h3 class="card-title">Common Childhood Illnesses</h3>
+                    <p>Information on symptoms, treatments, and prevention of common childhood diseases.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <div class="resource-icon">🎯</div>
+                    <h3 class="card-title">Developmental Milestones</h3>
+                    <p>Track and understand key developmental milestones from infancy to school age.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <div class="resource-icon">📊</div>
+                    <h3 class="card-title">Research Studies</h3>
+                    <p>Latest research findings on child development and educational methodologies.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BrightNest Kids</h3>
+                    <p>Dedicated to supporting children's development through resources, activities, and guidance for caregivers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="elearning.html">e-Learning</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="caretaker.html">Care Taker</a></li>
+                        <li><a href="information.html">Information</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: info@brightnestkids.com</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Address: 123 Learning St, Education City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BrightNest Kids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Category filter functionality
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                // In a real application, you would filter resources here
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Adjust navigation for mobile on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+            } else {
+                nav.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

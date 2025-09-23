@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Taker - BrightNest Kids</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Bright<span>Nest</span> Kids</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="elearning.html">e-Learning</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="caretaker.html" class="active">Care Taker</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1 class="page-title">Caregiver Resources</h1>
+            <p class="page-subtitle">Guidance, tips, and best practices for parents, doctors, babysitters, and schools to support child development.</p>
+            
+            <!-- Caretaker Types -->
+            <div class="caretaker-types">
+                <div class="card caretaker-card">
+                    <div class="caretaker-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="card-title">For Parents</h3>
+                    <p>Practical tips for nurturing development, setting boundaries, and creating a supportive home environment.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                
+                <div class="card caretaker-card">
+                    <div class="caretaker-icon">👨‍⚕️</div>
+                    <h3 class="card-title">For Doctors</h3>
+                    <p>Resources for assessing developmental milestones, identifying concerns, and providing guidance to families.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                
+                <div class="card caretaker-card">
+                    <div class="caretaker-icon">👶</div>
+                    <h3 class="card-title">For Babysitters</h3>
+                    <p>Essential information on safety, engaging activities, and understanding child behavior.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                
+                <div class="card caretaker-card">
+                    <div class="caretaker-icon">🏫</div>
+                    <h3 class="card-title">For Schools</h3>
+                    <p>Strategies for creating inclusive learning environments and supporting diverse learning needs.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Detailed Sections -->
+            <div class="card">
+                <h2 class="card-title">Parenting Tips & Best Practices</h2>
+                <p>Effective parenting involves balancing nurture with structure. Here are evidence-based approaches:</p>
+                <ul>
+                    <li>Establish consistent routines to provide security and predictability</li>
+                    <li>Use positive reinforcement to encourage desired behaviors</li>
+                    <li>Practice active listening to understand your child's perspective</li>
+                    <li>Set clear, age-appropriate boundaries with consistent consequences</li>
+                    <li>Model the behaviors and values you want to see in your child</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">Professional Caregiver Guidelines</h2>
+                <p>For doctors, teachers, and other professionals working with children:</p>
+                <ul>
+                    <li>Stay updated on the latest child development research</li>
+                    <li>Use screening tools to identify potential developmental delays early</li>
+                    <li>Collaborate with families to create consistent support systems</li>
+                    <li>Adapt approaches to meet individual children's needs</li>
+                    <li>Maintain professional boundaries while building trust</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BrightNest Kids</h3>
+                    <p>Dedicated to supporting children's development through resources, activities, and guidance for caregivers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="elearning.html">e-Learning</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="caretaker.html">Care Taker</a></li>
+                        <li><a href="information.html">Information</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: info@brightnestkids.com</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Address: 123 Learning St, Education City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BrightNest Kids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Adjust navigation for mobile on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+            } else {
+                nav.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

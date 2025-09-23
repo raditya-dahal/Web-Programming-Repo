@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightNest Kids - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Bright<span>Nest</span> Kids</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="elearning.html">e-Learning</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="caretaker.html">Care Taker</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1 class="page-title">Welcome to BrightNest Kids</h1>
+            <p class="page-subtitle">Your trusted partner in child development, offering resources and activities to nurture young minds at every stage of growth.</p>
+            
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1>Nurturing Young Minds for a Brighter Future</h1>
+                <p>Discover resources, activities, and guidance tailored to support children's development and well-being.</p>
+                <div class="cta-buttons">
+                    <a href="elearning.html" class="btn">Explore e-Learning</a>
+                    <a href="activities.html" class="btn btn-secondary">Find Activities</a>
+                </div>
+            </section>
+            
+            <!-- Slideshow -->
+            <section class="slideshow">
+                <div class="slide active" style="background-image: url('https://source.unsplash.com/random/1200x600/?children,playing')">
+                    <div class="slide-content">
+                        <h2>Learning Through Play</h2>
+                        <p>Engaging activities that combine fun with educational value</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('https://source.unsplash.com/random/1200x600/?children,learning')">
+                    <div class="slide-content">
+                        <h2>Developmental Milestones</h2>
+                        <p>Tracking growth and celebrating achievements at every stage</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('https://source.unsplash.com/random/1200x600/?children,interacting')">
+                    <div class="slide-content">
+                        <h2>Social Development</h2>
+                        <p>Building essential social skills through guided interactions</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Fact Counter -->
+            <section class="fact-counter">
+                <h2>Did You Know?</h2>
+                <div class="fact">90% of brain growth happens before age 5</div>
+            </section>
+            
+            <!-- Features Section -->
+            <section class="features">
+                <div class="card">
+                    <h3 class="card-title">e-Learning Resources</h3>
+                    <p>Access articles, books, and research studies on child psychology and development.</p>
+                    <a href="elearning.html" class="btn">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Engaging Activities</h3>
+                    <p>Discover physical and mental activities tailored to different age groups.</p>
+                    <a href="activities.html" class="btn">Explore Activities</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Caregiver Guidance</h3>
+                    <p>Find tips and best practices for parents, doctors, babysitters, and schools.</p>
+                    <a href="caretaker.html" class="btn">Get Guidance</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BrightNest Kids</h3>
+                    <p>Dedicated to supporting children's development through resources, activities, and guidance for caregivers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="elearning.html">e-Learning</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="caretaker.html">Care Taker</a></li>
+                        <li><a href="information.html">Information</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: info@brightnestkids.com</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Address: 123 Learning St, Education City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BrightNest Kids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Fact counter rotation
+        const facts = [
+            "90% of brain growth happens before age 5",
+            "Children learn language fastest between birth and age 3",
+            "Play is essential for healthy brain development",
+            "Reading to children builds vocabulary and imagination"
+        ];
+        
+        let factIndex = 0;
+        const factElement = document.querySelector('.fact');
+        
+        function changeFact() {
+            factIndex = (factIndex + 1) % facts.length;
+            factElement.textContent = facts[factIndex];
+        }
+        
+        // Change fact every 7 seconds
+        setInterval(changeFact, 7000);
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Adjust navigation for mobile on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+            } else {
+                nav.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
