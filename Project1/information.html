@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information - BrightNest Kids</title>
     <link rel="stylesheet" href="style.css">
+        <style>
+        /* Inline form styles to keep the page self-contained and meet assignment requirements */
+        .contact-section { margin: 24px 0; }
+        .contact-section h2 { margin-bottom: 8px; font-size: 1.4rem; color: #0b3b5a; }
+        .job-form .form-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+        .job-form .form-item label { display: block; font-weight: 600; margin-bottom: 6px; color: #222; }
+        .job-form input[type="text"],
+        .job-form input[type="email"],
+        .job-form select,
+        .job-form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+        .job-form input[type="checkbox"] { margin-right: 8px; transform: translateY(2px); }
+        .job-form .form-item.full-width { grid-column: 1 / -1; }
+        .job-form .form-buttons { display: flex; gap: 12px; justify-content: flex-start; align-items: center; }
+        .job-form .btn { padding: 10px 16px; border: none; border-radius: 4px; cursor: pointer; font-weight: 700; }
+        .job-form .btn.submit { background: #007acc; color: #fff; }
+        .job-form .btn.reset { background: #f3f3f3; color: #333; border: 1px solid #ccc; }
+        /* Spacing for the form inside the page container */
+        .job-form { padding: 14px; background: #fafafa; border-radius: 6px; border: 1px solid #eee; }
+
+        /* Responsive two-column layout for wider screens */
+        @media (min-width: 600px) {
+            .job-form .form-grid { grid-template-columns: repeat(2, 1fr); }
+            /* Ensure items that should be full width span both columns */
+            .job-form .form-item.full-width { grid-column: 1 / -1; }
+        }
+        </style>
 </head>
 <body>
     <!-- Header -->
@@ -30,7 +56,53 @@
         <div class="container">
             <h1 class="page-title">Child Development Information</h1>
             <p class="page-subtitle">Comprehensive details about children's growth stages, milestones, interests, health, and development.</p>
-            
+            <!-- Information / Staff form -->
+            <section class="contact-section">
+                <h2>Caregiver &amp; Staff Information Form</h2>
+                <form class="job-form" action="https://postman-echo.com/post" method="post">
+                    <div class="form-grid">
+                        <div class="form-item">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required maxlength="100" placeholder="Your full name">
+                        </div>
+
+                        <div class="form-item">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                        </div>
+
+                        <div class="form-item">
+                            <label for="position">Job Position</label>
+                            <select id="position" name="position" required>
+                                <option value="">-- Select a position --</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="assistant">Assistant</option>
+                                <option value="caretaker">Care Taker</option>
+                                <option value="admin">Administration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-item full-width">
+                            <label for="experience">Work Experience</label>
+                            <textarea id="experience" name="experience" rows="5" placeholder="Describe your relevant experience, responsibilities or qualifications..." required></textarea>
+                        </div>
+
+                        <div class="form-item full-width">
+                            <label for="agree">
+                                <input type="checkbox" id="agree" name="agree" required>
+                                I agree to the terms and conditions
+                            </label>
+                        </div>
+
+                        <div class="form-item form-buttons full-width">
+                            <button type="submit" class="btn submit">Submit</button>
+                            <button type="reset" class="btn reset">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
             <!-- Accordion Sections -->
             <div class="accordion">
                 <div class="accordion-header">
